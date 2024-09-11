@@ -1,0 +1,268 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    height: 100vh; /* Full height for both header and hero */
+    background-image: url('images/woman-with-food.png'); /* Woman image as background */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo img {
+    width: 150px;
+}
+
+nav {
+    padding: 10px 20px; /* Add some padding to space out the links */
+    border-bottom: 2px solid #e8e8e8; /* Subtle bottom border */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Align the links horizontally in the center */
+}
+
+nav ul li {
+    margin-right: 20px; /* Space between the links */
+    position: relative; /* Needed for hover effect */
+    margin-left: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: white; 
+    text-decoration: none;
+    font-size: 18px; /* Slightly larger font */
+    font-weight: bold; /* Make the text bold */
+    text-transform: uppercase; /* Make the text all uppercase */
+    padding: 10px 15px; /* Add padding inside the links */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 5px; /* Slight border radius for links */
+    /* color: white;
+    text-decoration: none;
+    font-size: 16px; */
+}
+
+nav ul li a:hover {
+    background-color: #f7931e; /* Add an orange background on hover (like the buttons) */
+    color: white; /* Change text to white on hover */
+}
+
+nav ul li a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #f7931e; /* Orange underline effect */
+    transform: scaleX(0); /* Start the underline as hidden */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover:after {
+    transform: scaleX(1); /* Show underline on hover */
+}
+
+/* 
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+} */
+
+.hero-text {
+    position: absolute; /* or relative if inside a flex container */
+    left: 0; /* Align to the far left */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical centering */
+    padding-left: 80px;
+}
+
+.hero-text h1 {
+    line-height: 1;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.hero-text h2 {
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.hero-text h3 {
+    line-height: 1;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-text a {
+ 
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ed7e2c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 13px;
+    font-size: 20px; /* Make the font size larger */
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+    background-color: #fff;
+}
+
+.feature img {
+    width: 300px;
+}
+
+.iso img {
+    width: 200px;
+}
+
+
+/* Products Section */
+.products {
+    text-align: center;
+    padding: 100px;
+    background-image: url("images/backg-products.png");
+
+}
+
+.products h2 {
+    margin-bottom: 20px;
+    color: #f7931e;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.product {
+    text-align: center;
+    background-image: url("images/ellipse-gray.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+}
+
+.product img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.product:hover {
+    background-image: url("images/ellipse-dark.png");
+}
+
+.product img:hover {
+    width: 180px;
+}
+
+/* Instagram Section */
+.instagram {
+    padding: 50px;
+    text-align: center;
+}
+
+.instagram-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.insta-item {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #555;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-contact p {
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+
+.love {
+    width: 100%;
+}
