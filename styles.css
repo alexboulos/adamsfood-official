@@ -23,16 +23,24 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding-left: 50px;
+    position:fixed;
+    z-index: 15;
 }
 
 .logo img {
-    width: 150px;
+    width: 250px;
 }
 
 nav {
-    padding: 10px 20px; /* Add some padding to space out the links */
-    border-bottom: 2px solid #e8e8e8; /* Subtle bottom border */
+    margin-left: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 40px; 
+    /* border-bottom: 2px solid #e8e8e8; Subtle bottom border */
+    background-image: url("images/nav-lines.png");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 nav ul {
@@ -44,9 +52,9 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 20px; /* Space between the links */
+    margin-right: 50px; 
     position: relative; /* Needed for hover effect */
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
 nav ul li:last-child {
@@ -68,7 +76,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #f7931e; /* Add an orange background on hover (like the buttons) */
+    background-color: #ed7e2c; /* Add an orange background on hover (like the buttons) */
     color: white; /* Change text to white on hover */
 }
 
@@ -79,7 +87,7 @@ nav ul li a:after {
     right: 0;
     bottom: 0;
     height: 2px;
-    background-color: #f7931e; /* Orange underline effect */
+    background-color: #ed7e2c; /* Orange underline effect */
     transform: scaleX(0); /* Start the underline as hidden */
     transition: transform 0.3s ease; /* Smooth transition */
 }
@@ -87,6 +95,52 @@ nav ul li a:after {
 nav ul li a:hover:after {
     transform: scaleX(1); /* Show underline on hover */
 }
+
+.socials {
+    display: flex;
+    align-items:self-start;
+    position:fixed;
+    right: 40px;
+    top: 50vh;
+    display: flex;
+
+}
+
+
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.icon {
+    background-color: #ed7e2c;;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon .fb {
+    width: 10px;
+    height: auto;
+}
+
+.icon .ig  {
+    width: 15px;
+    height: auto;
+}
+
+.icon + .icon {
+    border-top: none;
+}
+
+
+
+
 
 /* 
 nav ul {
@@ -107,7 +161,7 @@ nav ul li a {
 .hero-text {
     position: absolute; /* or relative if inside a flex container */
     left: 0; /* Align to the far left */
-    top: 50%; /* Center vertically */
+    top: 70%; /* Center vertically */
     transform: translateY(-50%); /* Adjust vertical centering */
     padding-left: 80px;
 }
@@ -142,7 +196,7 @@ nav ul li a {
     background-color: #ed7e2c;
     color: #fff;
     text-decoration: none;
-    border-radius: 13px;
+    border-radius: 30px;
     font-size: 20px; /* Make the font size larger */
     font-weight: bold; /* Make the text bold */
 }
@@ -169,12 +223,13 @@ nav ul li a {
     text-align: center;
     padding: 100px;
     background-image: url("images/backg-products.png");
-
+    background-size: contain;
 }
 
 .products h2 {
+    font-size: 38px;
     margin-bottom: 20px;
-    color: #f7931e;
+    color: #ed7e2c;
 }
 
 .product-list {
@@ -187,11 +242,13 @@ nav ul li a {
     background-image: url("images/ellipse-gray.png");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 150px;
+    width: 250px;
 }
 
 .product img {
-    width: 150px;
+    padding-right: 100px;
+    padding-top: 20px;
+    width: 320px;
     margin-bottom: 10px;
 }
 
@@ -200,8 +257,10 @@ nav ul li a {
 }
 
 .product img:hover {
-    width: 180px;
+    width: 350px;
 }
+
+.product
 
 /* Instagram Section */
 .instagram {
@@ -209,19 +268,38 @@ nav ul li a {
     text-align: center;
 }
 
+.instagram h2 {
+    text-align: center;
+}
+
+.instagram h3 {
+    color: #ed7e2c;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.instagram a {
+    margin: 50px 45vw;
+}
+
 .instagram-grid {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 100px ;
 }
+
 
 .insta-item {
     width: 150px;
     height: 150px;
     background-color: #ccc;
+    flex-basis: calc(33.33% - 10px);
 }
 
 /* Footer */
-footer {
+/* footer {
     background-color: #333;
     color: #fff;
     padding: 50px;
@@ -255,14 +333,72 @@ footer {
     display: flex;
     justify-content: space-between;
     padding-top: 20px;
-}
+} */
 
-.social-icons img {
-    width: 30px;
-    margin-left: 10px;
+
+footer{
+    background-image: url("images/footer.png");
+    height: 500px;
+    width: auto;
 }
 
 
 .love {
     width: 100%;
+}
+
+
+.container-socials {
+    position: fixed;
+    right: 0; /* move container to the far right */
+    top: 50%; /* adjust the top spacing as needed */
+    display: flex;
+    align-items: flex-start;
+    max-width: calc(100vw - 20px); 
+}
+
+
+.button-stack {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px; /* space between buttons and images */
+    visibility: hidden;
+}
+
+.stacked-button {
+    width: 100px; /* button width */
+    height: 50px; /* button width */
+    padding: 10px;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.stacked-button:last-child {
+    margin-bottom: 0; /* remove margin after the last button */
+}
+
+.image-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.square-img {
+    width: 24px; /* adjust size as needed */
+    height: 24px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.square-img:last-child {
+    margin-bottom: 0;
+}
+
+.socials-background {
+    background-color: orange;
+    width: 50px;  /* width of orange div */
+    height: 50px; /* height of orange div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px; /* space between the divs */
 }
